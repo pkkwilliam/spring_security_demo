@@ -1,29 +1,15 @@
 package com.goowhere.springsecuritydemo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 /**
  * Author: Ka Kei Pun
- * Date: 8/12/20
+ * Date: 8/13/20
  * Version: 1.0.0
  */
 
-@Entity
-public class UserDao {
+public class LoginRequestModel {
 
-  @Id
-  private long id;
   private String username;
   private String password;
-
-  public long getId() {
-    return id;
-  }
-
-  public void setId(long id) {
-    this.id = id;
-  }
 
   public String getUsername() {
     return username;
@@ -43,9 +29,8 @@ public class UserDao {
 
   @Override
   public String toString() {
-    return "UserDao{" +
-            "id=" + id +
-            ", username='" + username + '\'' +
+    return "LoginRequestModel{" +
+            "username='" + username + '\'' +
             ", password='" + password + '\'' +
             '}';
   }
